@@ -1,0 +1,1 @@
+general {browser /usr/bin/xdg-open terminal {alacritty --title=%t --command %c} runasroot {%terminal(echo "%p" ; su --command="%p" ; read -p "%close")} tmpdir /tmp allerrors 0 fontincrement 2} geometry {main {1344 720} text {1916 996} import {600 400}} fileselection {lastdir ~/}

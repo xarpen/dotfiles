@@ -1,0 +1,243 @@
+// -*- mode: jsonc -*-
+{
+  "position": "bottom",
+  "height": 48,
+  "spacing": 0,
+  "mode": "dock",
+  "exclusive": true,
+  "reload_style_on_change": true,
+  "modules-left": [
+    "image#start",
+    "hyprland/workspaces",
+    // "hyprland/mode",
+    // "hyprland/scratchpad",
+    "wlr/taskbar"
+  ],
+  //"modules-center": [
+  //  "hyprland/window"
+  //],
+  "modules-right": [
+    "tray",
+    "hyprland/language",
+    //"network",
+    //"bluetooth",
+    "clock",
+    "pulseaudio",
+    "custom/wlsunset",
+    "custom/desktop"
+    //"mpd",
+    //"idle_inhibitor",
+    //"power-profiles-daemon",
+    //"cpu",
+    //"memory",
+    //"temperature",
+    //"backlight",
+    //"keyboard-state",
+    //"battery",
+    //"battery#bat2",
+  ],
+  "image#start": {
+    "path": ".local/share/icons/distro-arch-symbolic.svg",
+    "size": 24,
+    "on-click": "/usr/bin/wofi --show drun"
+  },
+  "hyprland/workspaces": {
+    "format": "{icon}",
+    "on-scroll-up": "hyprctl dispatch workspace +1",
+    "on-scroll-down": "hyprctl dispatch workspace e-1",
+    "format-icons": {
+      "desktop": "🏠",
+      "comm": "💬",
+      "audio": "🔊",
+      "code": "📝",
+      "unity": "💠",
+      "gk": "💾",
+      "security": "🔑",
+      "gaming": "🕹"
+    }
+  },
+  "wlr/taskbar": {
+    "format": "{icon} {title}",
+    "icon-size": 32,
+    "cursor": false,
+    "on-click-middle": "close",
+    "on-click": "activate",
+    "on-scroll-up": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+",
+    "on-scroll-down": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
+  },
+  "hyprland/language": {
+    "format": "{short}"
+  },
+  "tray": {
+    "spacing": 10
+  },
+  "network": {
+    "format-wifi": "",
+    "format-disabled": "🚫",
+    "format-ethernet": "🖧",
+    "tooltip-format": "{ifname}\n{ipaddr}\n{gwaddr}",
+    "format-linked": "{ifname} (No IP)",
+    "format-disconnected": "🌐",
+    "format-alt": "🖧"
+  },
+  "bluetooth": {
+    "format": "",
+    "format-disabled": "",
+    "format-connected": "",
+    "tooltip-format": "{controller_alias}\t{controller_address}",
+    "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
+    "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}"
+  },
+  "clock": {
+    "format": "{:%R}",
+    "format-alt": "{:%H:%M}",
+    "tooltip-format": "<tt>{calendar}</tt>\n\nCopenhagen\nDenver\n{tz_list}",
+    "timezones": [ "Asia/Tokyo", "Europe/Copenhagen", "America/Denver" ],
+    "calendar": {
+      "on-scroll": 1,
+      "format": {
+        "months":     "{}",
+        "weekdays":   "{}",
+        "days":       "{}",
+        "today":      "<span color='deepskyblue'><u>{}</u></span>"
+      }
+    },
+    "actions": {
+      "on-click-forward": "tz_down",
+      "on-click-backward": "tz_up",
+      "on-scroll-up": "shift_down",
+      "on-scroll-down": "shift_up"
+    },
+    "on-click": "librewolf https://www.calendardate.com/jp_2024.php"
+  },
+  "pulseaudio": {
+    "format": "{icon} {volume} {format_source}",
+    "format-muted": "{icon} {volume} {format_source}",
+    "format-bluetooth": "{icon} {volume} {format_source}",
+    "format-bluetooth-muted": "{icon} {volume} {format_source}",
+    "format-source": "",
+    "format-source-muted": "",
+    "format-icons": {
+      "headphone": "",
+      "default": [
+        "",
+        "",
+        ""
+      ]
+    },
+    "on-click": "pavucontrol-qt"
+  },
+  "custom/wlsunset": {
+    "exec": "~/.config/hypr/scripts/day-night.zsh",
+    "interval": 1800,
+    "on-click": "killall wlsunset",
+    "format": "{}",
+    "tooltip": false
+  },
+  "custom/desktop": {
+    "on-click": "hyprctl dispatch workspace name:desktop",
+    "format": " ",
+    "tooltip": false
+  }
+//  "keyboard-state": {
+//    "numlock": true,
+//    "capslock": true,
+//    "format": "{name} {icon}",
+//    "format-icons": {
+//      "locked": "",
+//      "unlocked": ""
+//    }
+//  },
+//  "sway/mode": {
+//    "format": "<span style=\"italic\">{}</span>"
+//  },
+//  "sway/scratchpad": {
+//    "format": "{icon} {count}",
+//    "show-empty": false,
+//    "format-icons": ["", ""],
+//    "tooltip": true,
+//    "tooltip-format": "{app}: {title}"
+//  },
+//  "mpd": {
+//    "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩ {volume}% ",
+//    "format-disconnected": "Disconnected ",
+//    "format-stopped": "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped ",
+//    "unknown-tag": "N/A",
+//    "interval": 5,
+//    "consume-icons": {
+//      "on": " "
+//    },
+//    "random-icons": {
+//      "off": "<span color=\"#f53c3c\"></span> ",
+//      "on": " "
+//    },
+//    "repeat-icons": {
+//      "on": " "
+//    },
+//    "single-icons": {
+//      "on": "1 "
+//    },
+//    "state-icons": {
+//      "paused": "",
+//      "playing": ""
+//    },
+//    "tooltip-format": "MPD (connected)",
+//    "tooltip-format-disconnected": "MPD (disconnected)"
+//  },
+//  "idle_inhibitor": {
+//    "format": "{icon}",
+//    "format-icons": {
+//      "activated": "",
+//      "deactivated": ""
+//    }
+//  },
+//  "cpu": {
+//    "format": "{usage}% ",
+//    "tooltip": false
+//  },
+//  "memory": {
+//    "format": "{}% "
+//  },
+//  "temperature": {
+//    // "thermal-zone": 2,
+//    // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+//    "critical-threshold": 80,
+//    // "format-critical": "{temperatureC}°C {icon}",
+//    "format": "{temperatureC}°C {icon}",
+//    "format-icons": ["", "", ""]
+//  },
+//  "backlight": {
+//    // "device": "acpi_video1",
+//    "format": "{percent}% {icon}",
+//    "format-icons": ["", "", "", "", "", "", "", "", ""]
+//  },
+//  "battery": {
+//    "states": {
+//      // "good": 95,
+//      "warning": 30,
+//      "critical": 15
+//    },
+//    "format": "{capacity}% {icon}",
+//    "format-full": "{capacity}% {icon}",
+//    "format-charging": "{capacity}% ",
+//    "format-plugged": "{capacity}% ",
+//    "format-alt": "{time} {icon}",
+//    // "format-good": "", // An empty format will hide the module
+//    // "format-full": "",
+//    "format-icons": ["", "", "", "", ""]
+//  },
+//  "battery#bat2": {
+//    "bat": "BAT2"
+//  },
+//  "power-profiles-daemon": {
+//    "format": "{icon}",
+//    "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
+//    "tooltip": true,
+//    "format-icons": {
+//      "default": "",
+//      "performance": "",
+//      "balanced": "",
+//      "power-saver": ""
+//    }
+//  }
+}

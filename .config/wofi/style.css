@@ -1,0 +1,61 @@
+/* https://docs.gtk.org/gtk3/css-overview.html */
+/* https://gnome.pages.gitlab.gnome.org/libadwaita/doc/main/named-colors.html */
+/* https://www.w3.org/TR/selectors-3/#specificity */
+@define-color borderColor rgb(64, 64, 64);
+@define-color selectedColor #354f80;
+@define-color backgroundColor rgb(43, 43, 43);
+@define-color foregroundColor white;
+@define-color inputBackgroundColor alpha(black, 0.2);
+@define-color panelBackgroundColor alpha(rgb(48, 48, 48), 0.95);
+
+window {
+    border-radius: 0.25em;
+    background-color: @panelBackgroundColor;
+}
+
+#input {
+    color: @foregroundColor;
+    border-color: @borderColor;
+    border-width: 1px;
+    border-radius: 0.25em 0.25em 0 0;
+    background-color: @inputBackgroundColor;
+}
+
+#inner-box {
+}
+
+#outer-box {
+}
+
+#scroll {
+}
+
+#text {
+    margin: 0.7em;
+    font-size: 0.9em;
+    color: @foregroundColor;
+}
+
+#entry > * {
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+}
+
+#entry:selected {
+    background-color: @selectedColor;
+}
+
+/* https://cloudninja.pw/docs/wofi.html
+#window       | The name of the window itself.
+#outer-box    | The name of the box that contains everything.
+#input        | The name of the search bar.
+#scroll       | The name of the scrolled window containing all of the entries.
+#inner-box    | The name of the box containing all of the entries.
+#img          | The name of all images in entries displayed in image mode.
+#text         | The name of all the text in entries.
+#unselected   | The name of all entries currently unselected. A better way of doing this is to do #entry and combine that with #entry:selected
+#selected     | The name of all entries currently selected. A better way of doing this is to do #entry:selected
+.entry        | The class attached to all entries. This is attached to the inside property box and is old, you probably want #entry instead
+#entry        | The name of all entries.
+#expander-box | The name of all boxes shown when expanding entries with multiple actions
+*/

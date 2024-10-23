@@ -1,0 +1,6 @@
+# Default
+* text=auto
+
+*.png filter=lfs diff=lfs merge=lfs
+*.svg filter=lfs diff=lfs merge=lfs
+*.xpi filter=lfs diff=lfs merge=lfs

@@ -1,0 +1,29 @@
+[cursor.style]
+shape = "Beam"
+
+[font]
+size = 14
+
+[[keyboard.bindings]]
+action = "Copy"
+key = "C"
+mods = "Control"
+
+[[keyboard.bindings]]
+chars = "\u0003"
+key = "C"
+mods = "Control"
+
+[[keyboard.bindings]]
+action = "Paste"
+key = "V"
+mods = "Control"
+
+[[keyboard.bindings]]
+action = "CreateNewWindow"
+key = "T"
+mods = "Control"
+
+[window]
+decorations = "none"
+opacity = 0.3

@@ -1,0 +1,13 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Unity
+Icon=unity.png
+Exec=
+Comment=Unity Editor
+Categories=Development;
+Terminal=false
+StartupWMClass=Unity
+StartupNotify=false
+NoDisplay=true
+Hidden=true # This file is used for icon

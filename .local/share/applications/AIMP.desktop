@@ -1,0 +1,13 @@
+[Desktop Entry]
+Name=AIMP
+Exec=bottles-cli run -p AIMP -b 'aimp' -- %u
+Type=Application
+Terminal=false
+Categories=Application;
+Icon=AIMP.png
+Comment=Launch AIMP using Bottles.
+StartupWMClass=AIMP
+Actions=Configure;
+[Desktop Action Configure]
+Name=Configure in Bottles
+Exec=bottles -b 'aimp'

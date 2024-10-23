@@ -1,0 +1,249 @@
+/* https://docs.gtk.org/gtk3/css-overview.html */
+/* https://gnome.pages.gitlab.gnome.org/libadwaita/doc/main/named-colors.html */
+/* https://www.w3.org/TR/selectors-3/#specificity */
+@define-color borderColor rgb(64, 64, 64);
+@define-color hoverColor alpha(white, 0.2);
+@define-color activeColor alpha(white, 0.5);
+@define-color selectedColor #354f80;
+@define-color backgroundColor rgb(43, 43, 43);
+@define-color foregroundColor white;
+@define-color maximizedColor alpha(darkorange, 0.5);
+@define-color workspacesUrgentColor alpha(deepskyblue, 0.5);
+@define-color buttonBackgroundColor alpha(white, 0.1);
+@define-color panelBackgroundColor alpha(black, 0.1);
+/* padding 0.5em; box-shadow: 0.15em; */
+
+* {
+    border: none;
+    border-radius: 0;
+    outline: none;
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+    text-shadow: none;
+    text-decoration: none;
+    color: initial;
+    font-size: initial;
+    font-family: initial;
+    background: none;
+}
+
+label {
+    color: @foregroundColor;
+}
+
+#waybar {
+    background-color: @panelBackgroundColor;
+    color: @foregroundColor;
+    font-family: Segoe UI, Arial, sans-serif;
+}
+
+/* START BUTTON */
+
+#image.start {
+    margin-right: 1px;
+    padding: 0 0.5em;
+}
+#image.start:hover {
+    border-radius: 3em;
+}
+
+/* WORKSPACES */
+
+#workspaces button {
+    margin-right: 1px;
+    padding: 0 0.15em;
+}
+#workspaces button:hover {
+    background-color: @hoverColor;
+}
+#workspaces button.visible {
+    box-shadow: inset 0 -0.125em @activeColor;
+    background-color: @hoverColor;
+}
+#workspaces button.focused {
+    background-color: magenta;
+}
+#workspaces button.urgent {
+    box-shadow: inset 0 -0.125em @activeColor;
+    background-color: @workspacesUrgentColor;
+}
+
+/* TASKBAR */
+
+#taskbar button {
+    background-color: @buttonBackgroundColor;
+    margin-right: 1px;
+    padding: 0 0.5em;
+}
+#taskbar button:hover {
+    background-color: @hoverColor;
+}
+#taskbar button.active {
+    box-shadow: inset 0 -0.125em @activeColor;
+    background-color: @hoverColor;
+}
+#taskbar button.minimized {
+    background-color: magenta;
+}
+#taskbar button.maximized {
+    background-color: @hoverColor;
+    border: 0.25em solid alpha(@activeColor, 0.25);
+}
+#taskbar button.fullscreen {
+    background-color: @maximizedColor;
+}
+
+/* TRAY */
+
+#clock, #battery, #cpu, #memory, #disk,
+#temperature, #backlight, #network, #bluetooth,
+#pulseaudio, #wireplumber, #custom-media,
+#tray, #mode, #idle_inhibitor, #scratchpad,
+#power-profiles-daemon, #mpd, #language,
+#custom-wlsunset, #custom-desktop  {
+    padding: 0 0.6em;
+}
+#clock:hover, #battery:hover, #cpu:hover, #memory:hover, #disk:hover,
+#temperature:hover, #backlight:hover, #network:hover, #bluetooth:hover,
+#pulseaudio:hover, #wireplumber:hover, #custom-media:hover,
+#notray:hover, #mode:hover, #idle_inhibitor:hover, #scratchpad:hover,
+#power-profiles-daemon:hover, #mpd:hover, #language:hover,
+#custom-wlsunset:hover, #custom-desktop:hover  {
+    background-color: @hoverColor;
+}
+
+#language, #clock, #pulseaudio {
+    font-family: Segoe UI, Arial, sans-serif;
+    font-weight: bold;
+}
+
+#pulseaudio.muted, #wireplumber.muted {
+    text-decoration: line-through;
+}
+
+#network.disabled, #network.disconnected {
+    text-decoration: line-through;
+}
+#network.disconnected {
+    padding-top: 0.35em;
+}
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+}
+
+/* TRAY MENU */
+
+#tray menu {
+    box-shadow: none;
+    border-radius: 0;
+    border: 1px solid @borderColor;
+    background-color: @backgroundColor;
+    padding: 0.1em 0.1em;
+}
+
+#tray menu menuitem {
+    margin: 1px 1px;
+}
+
+#tray menu menuitem:hover {
+    background-color: @selectedColor;
+    border-radius: 0.25em;
+}
+
+#tray menu separator {
+    background-color: @borderColor;
+}
+
+#tray menu label {
+    margin: 0.015em 0 0.15em -0.4em;
+}
+
+#tray menu arrow {
+    -gtk-icon-source: -gtk-icontheme("go-right-symbolic");
+}
+
+/* TOOLTIP */
+
+tooltip {
+    border: 1px solid @borderColor;
+    background-color: @backgroundColor;
+    color: @foregroundColor;
+}
+
+tooltip * {
+    padding: 0.4em 0.5em;
+    font-family: Segoe UI, Arial, sans-serif;
+    font-weight: bold;
+}
+
+/* https://github.com/Alexays/Waybar/wiki/Styling
+window#waybar                                    | Main Waybar window
+window#waybar.hidden                             | Waybar window in hidden mode
+window#waybar.termite                            | Waybar window in termite mode
+window#waybar.chromium                           | Waybar window in Chromium mode
+button                                           | General button settings
+button:hover                                     | Button hover state
+#pulseaudio:hover                                | Pulseaudio hover state
+#workspaces button                               | Workspace buttons
+#workspaces button:hover                         | Workspace button hover state
+#workspaces button.focused                       | Focused workspace button
+#workspaces button.urgent                        | Urgent workspace button
+#mode                                            | Mode settings
+#clock, #battery, #cpu, #memory, #disk,          | Tray items
+#temperature, #backlight, #network,              | Tray items
+#pulseaudio, #wireplumber, #custom-media,        | Tray items
+#tray, #mode, #idle_inhibitor, #scratchpad,      | Tray items
+#power-profiles-daemon, #mpd                     | Tray items
+#window, #workspaces                             | Window and workspaces margin settings
+.modules-left > widget:first-child > #workspaces | Left module margin settings
+.modules-right > widget:last-child > #workspaces | Right module margin settings
+#clock                                           | Clock settings
+#battery                                         | Battery settings
+#battery.charging, #battery.plugged              | Battery charging or plugged state
+#battery.critical:not(.charging)                 | Battery critical state
+#power-profiles-daemon                           | Power profiles daemon general settings
+#power-profiles-daemon.performance               | Power profiles daemon performance mode
+#power-profiles-daemon.balanced                  | Power profiles daemon balanced mode
+#power-profiles-daemon.power-saver               | Power profiles daemon power-saver mode
+label:focus                                      | Focused label
+#cpu                                             | CPU module settings
+#memory                                          | Memory module settings
+#disk                                            | Disk module settings
+#backlight                                       | Backlight module settings
+#network                                         | Network module settings
+#network.disconnected                            | Network disconnected state
+#pulseaudio                                      | Pulseaudio module settings
+#pulseaudio.muted                                | Pulseaudio muted state
+#wireplumber                                     | Wireplumber module settings
+#wireplumber.muted                               | Wireplumber muted state
+#custom-media                                    | Custom media module settings
+#custom-media.custom-spotify                     | Custom media Spotify settings
+#custom-media.custom-vlc                         | Custom media VLC settings
+#temperature                                     | Temperature module settings
+#temperature.critical                            | Temperature critical state
+#tray                                            | Tray module settings
+#tray > .passive                                 | Tray passive state
+#tray > .needs-attention                         | Tray needs-attention state
+#idle_inhibitor                                  | Idle inhibitor module settings
+#idle_inhibitor.activated                        | Idle inhibitor activated state
+#mpd                                             | MPD module settings
+#mpd.disconnected                                | MPD disconnected state
+#mpd.stopped                                     | MPD stopped state
+#mpd.paused                                      | MPD paused state
+#language                                        | Language module settings
+#keyboard-state                                  | Keyboard state module settings
+#keyboard-state > label                          | Keyboard state label settings
+#keyboard-state > label.locked                   | Keyboard state locked label settings
+#scratchpad                                      | Scratchpad module settings
+#scratchpad.empty                                | Empty scratchpad state
+#privacy                                         | Privacy module settings
+#privacy-item                                    | Privacy item settings
+#privacy-item.screenshare                        | Privacy item screenshare state
+#privacy-item.audio-in                           | Privacy item audio-in state
+#privacy-item.audio-out                          | Privacy item audio-out state
+*/
