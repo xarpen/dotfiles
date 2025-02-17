@@ -91,14 +91,15 @@
   "clock": {
     "format": "{:%R}",
     "format-alt": "{:%H:%M}",
-    "tooltip-format": "<tt>{calendar}</tt>\n\nCopenhagen\nDenver\n{tz_list}",
-    "timezones": [ "Asia/Tokyo", "Europe/Copenhagen", "America/Denver" ],
+    "tooltip-format": "<tt>{calendar}</tt>\n\nCopenhagen\nMoscow\nDenver\n{tz_list}",
+    "timezones": [ "Asia/Tokyo", "Europe/Copenhagen", "Europe/Moscow", "America/Denver" ],
     "calendar": {
       "on-scroll": 1,
       "format": {
         "months":     "{}",
-        "weekdays":   "{}",
         "days":       "{}",
+        "weeks":   "{:%W}",
+        "weekdays":   "{}",
         "today":      "<span color='deepskyblue'><u>{}</u></span>"
       }
     },
@@ -108,7 +109,7 @@
       "on-scroll-up": "shift_down",
       "on-scroll-down": "shift_up"
     },
-    "on-click": "librewolf https://www.calendardate.com/jp_2024.php"
+    "on-click": "librewolf https://www.calendardate.com/jp_2025.php"
   },
   "pulseaudio": {
     "format": "{icon} {volume} {format_source}",
@@ -127,13 +128,13 @@
     },
     "on-click": "pavucontrol-qt"
   },
-  "custom/wlsunset": {
-    "exec": "~/.config/hypr/scripts/day-night.zsh",
-    "interval": 1800,
-    "on-click": "killall wlsunset",
-    "format": "{}",
-    "tooltip": false
-  },
+//  "custom/wlsunset": {
+//    "exec": "~/.config/hypr/scripts/day-night.zsh",
+//    "interval": 1800,
+//    "on-click": "killall wlsunset",
+//    "format": "{}",
+//    "tooltip": false
+//  },
   "custom/desktop": {
     "on-click": "hyprctl dispatch workspace name:desktop",
     "format": " ",

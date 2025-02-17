@@ -13,5 +13,5 @@ echo "Configuring paru"
 bash ./etc-paru.bash
 
 echo "Installing packages"
-paru -S --noconfirm --needed --skipreview --useask --batchinstall grim slurp arronax bottles gitkraken flameshot-git librewolf-bin powershell-bin qalculate-qt tkpacman dotool
-paru --needed --skipreview spotify
+paru -S --noconfirm --needed --skipreview --useask --batchinstall grim slurp arronax bottles gitkraken flameshot librewolf-bin powershell-bin qalculate-qt tkpacman dotool
+paru --needed --skipreview spotify-edge
