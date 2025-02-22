@@ -3,6 +3,7 @@
 /* https://www.w3.org/TR/selectors-3/#specificity */
 @define-color borderColor rgb(64, 64, 64);
 @define-color hoverColor alpha(white, 0.2);
+@define-color hvactColor alpha(white, 0.3);
 @define-color activeColor alpha(white, 0.5);
 @define-color selectedColor #354f80;
 @define-color backgroundColor rgb(43, 43, 43);
@@ -61,6 +62,10 @@ label {
     box-shadow: inset 0 -0.125em @activeColor;
     background-color: @hoverColor;
 }
+#workspaces button.visible:hover {
+    box-shadow: inset 0 -0.125em @activeColor;
+    background-color: @hvactColor;
+}
 #workspaces button.focused {
     background-color: magenta;
 }
@@ -82,6 +87,10 @@ label {
 #taskbar button.active {
     box-shadow: inset 0 -0.125em @activeColor;
     background-color: @hoverColor;
+}
+#taskbar button.active:hover {
+    box-shadow: inset 0 -0.125em @activeColor;
+    background-color: @hvactColor;
 }
 #taskbar button.minimized {
     background-color: magenta;
