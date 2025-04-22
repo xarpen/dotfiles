@@ -1,7 +1,7 @@
 prompt=
 insensitive=true
 show=drun
-width=40%
+width=50%
 lines=10
 columns=3
 image_size=32

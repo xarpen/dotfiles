@@ -138,6 +138,10 @@ label {
     padding-top: 0.35em;
 }
 
+#custom-desktop  {
+    border-left: 1px solid alpha(white, 0.1);
+ }
+
 #tray > .passive {
     -gtk-icon-effect: dim;
 }

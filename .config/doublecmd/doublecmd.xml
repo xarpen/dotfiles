@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<doublecmd DCVersion="1.1.20 gamma" ConfigVersion="15">
+<doublecmd DCVersion="1.1.23 gamma" ConfigVersion="15">
   <Toolbars>
     <MainToolbar>
       <Row>
@@ -378,10 +378,10 @@
       <ShowCaptions>False</ShowCaptions>
       <ReportErrorWithCommands>False</ReportErrorWithCommands>
     </MiddleBar>
-    <DriveBar1>False</DriveBar1>
+    <DriveBar1>True</DriveBar1>
     <DriveBar2>True</DriveBar2>
     <DriveBarFlat>True</DriveBarFlat>
-    <DrivesListButton Enabled="True">
+    <DrivesListButton Enabled="False">
       <ShowLabel>True</ShowLabel>
       <ShowFileSystem>True</ShowFileSystem>
       <ShowFreeSpace>True</ShowFreeSpace>
@@ -396,10 +396,10 @@
     <TermWindow>False</TermWindow>
     <KeyButtons>False</KeyButtons>
     <InterfaceFlat>True</InterfaceFlat>
-    <DriveFreeSpace>False</DriveFreeSpace>
+    <DriveFreeSpace>True</DriveFreeSpace>
     <DriveIndicator>False</DriveIndicator>
-    <ProgressInMenuBar>False</ProgressInMenuBar>
-    <PanelOfOperationsInBackground>False</PanelOfOperationsInBackground>
+    <ProgressInMenuBar>True</ProgressInMenuBar>
+    <PanelOfOperationsInBackground>True</PanelOfOperationsInBackground>
     <HorizontalFilePanels>False</HorizontalFilePanels>
     <ShortFormatDriveInfo>False</ShortFormatDriveInfo>
     <UppercaseDriveLetter>False</UppercaseDriveLetter>
@@ -505,7 +505,7 @@
     <DefaultDropEffect>True</DefaultDropEffect>
   </FileOperations>
   <Tabs>
-    <Options>51985</Options>
+    <Options>52049</Options>
     <CharacterLimit>32</CharacterLimit>
     <Position>0</Position>
     <ActionOnDoubleClick>2</ActionOnDoubleClick>
@@ -539,7 +539,7 @@
     <GridVertLine>False</GridVertLine>
     <GridHorzLine>False</GridHorzLine>
     <ShowWarningMessages>True</ShowWarningMessages>
-    <SpaceMovesDown>False</SpaceMovesDown>
+    <SpaceMovesDown>True</SpaceMovesDown>
     <DirBrackets>False</DirBrackets>
     <InplaceRename>True</InplaceRename>
     <InplaceRenameButton>True</InplaceRenameButton>
@@ -573,7 +573,7 @@
   </AutoRefresh>
   <Icons>
     <Theme>dctheme</Theme>
-    <ShowHiddenDimmed>False</ShowHiddenDimmed>
+    <ShowHiddenDimmed>True</ShowHiddenDimmed>
     <ShowMode>3</ShowMode>
     <ShowOverlays>True</ShowOverlays>
     <Size>48</Size>
@@ -782,7 +782,7 @@
           <Title>Name</Title>
           <Unique>022B3B10-42DE-4A5C-A8B5-BE5A19C87BD8</Unique>
           <FuncString>[DC().GETFILENAMENOEXT{}]</FuncString>
-          <Width>786</Width>
+          <Width>71</Width>
           <Align>0</Align>
           <Font>
             <Name>Segoe UI</Name>
@@ -856,7 +856,7 @@
           <Title>Name</Title>
           <Unique>022B3B10-42DE-4A5C-A8B5-BE5A19C87BD8</Unique>
           <FuncString>[DC().GETFILENAME{}]</FuncString>
-          <Width>786</Width>
+          <Width>253</Width>
           <Align>0</Align>
           <Font>
             <Name>Segoe UI</Name>

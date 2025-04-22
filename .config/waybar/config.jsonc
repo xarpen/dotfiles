@@ -69,7 +69,11 @@
     "format": "{short}"
   },
   "tray": {
-    "spacing": 10
+    "spacing": 10,
+    "icons": {
+      //"blueman": "tray-bluetooth",
+      //"nm-applet": "tray-network"
+    }
   },
   "network": {
     "format-wifi": "",
@@ -92,7 +96,7 @@
     "format": "{:%R}",
     "format-alt": "{:%H:%M}",
     "tooltip-format": "<tt>{calendar}</tt>\n\nCopenhagen\nMoscow\nDenver\n{tz_list}",
-    "timezones": [ "Asia/Tokyo", "Europe/Copenhagen", "Europe/Moscow", "America/Denver" ],
+    "timezones": [ "Asia/Tokyo", "Europe/Berlin", "Europe/Moscow", "America/Denver" ],
     "calendar": {
       "on-scroll": 1,
       "format": {

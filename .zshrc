@@ -1,3 +1,5 @@
+#!/usr/bin/env zsh
+
 export EDITOR=subl
 export ZSH="$HOME/.oh-my-zsh"
 export PATH=$PATH:~/.local/bin
