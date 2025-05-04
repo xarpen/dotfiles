@@ -8,11 +8,32 @@ local opts = {
     cursor_centric_zoom_auto_center = true,
     cursor_centric_zoom_dezoom_if_full_view = false,
 }
+
 local options = require 'mp.options'
 local msg = require 'mp.msg'
 local assdraw = require 'mp.assdraw'
 
+local function Set(t)
+    local set = {}
+    for _, v in pairs(t) do set[v] = true end
+    return set
+end
+
+local EXTENSIONS_IMAGES_DEFAULT = Set {
+    'avif', 'bmp', 'gif', 'j2k', 'jp2', 'jpeg', 'jpg', 'jxl', 'png',
+    'svg', 'tga', 'tif', 'tiff', 'webp', 'dds'
+}
+
 options.read_options(opts, nil, function() end)
+
+local function get_extension(path)
+    return path:match("%.([^%.]+)$") or "nomatch"
+end
+function is_image()
+    local filepath = mp.get_property("path")
+    local extension = get_extension(filepath):lower()
+    return EXTENSIONS_IMAGES_DEFAULT[extension]
+end
 
 function clamp(value, low, high)
     if value <= low then
@@ -28,6 +49,8 @@ end
 local cleanup = nil -- function set up by drag-to-pan/pan-follows cursor and must be called to clean lingering state
 
 function drag_to_pan_handler(table)
+    if not is_image() then return end
+
     if cleanup then
         cleanup()
         cleanup = nil
@@ -96,6 +119,8 @@ function drag_to_pan_handler(table)
 end
 
 function pan_follows_cursor_handler(table)
+    if not is_image() then return end
+
     if cleanup then
         cleanup()
         cleanup = nil
@@ -138,6 +163,8 @@ function pan_follows_cursor_handler(table)
 end
 
 function cursor_centric_zoom_handler(amt)
+    if not is_image() then return end
+
     local zoom_inc = tonumber(amt)
     if not zoom_inc or zoom_inc == 0 then return end
     local dim = mp.get_property_native("osd-dimensions")
@@ -202,6 +229,8 @@ function cursor_centric_zoom_handler(amt)
 end
 
 function align_border(x, y)
+    if not is_image() then return end
+
     local dim = mp.get_property_native("osd-dimensions")
     if not dim then return end
     local video_size = { dim.w - dim.ml - dim.mr, dim.h - dim.mt - dim.mb }
@@ -219,6 +248,8 @@ function align_border(x, y)
 end
 
 function pan_image(axis, amount, zoom_invariant, image_constrained)
+    if not is_image() then return end
+
     amount = tonumber(amount)
     if not amount or amount == 0 or axis ~= "x" and axis ~= "y" then return end
     if zoom_invariant == "yes" then
@@ -247,12 +278,16 @@ function pan_image(axis, amount, zoom_invariant, image_constrained)
 end
 
 function rotate_video(amt)
+    if not is_image() then return end
+
     local rot = mp.get_property_number("video-rotate")
     rot = (rot + amt) % 360
     mp.set_property_number("video-rotate", rot)
 end
 
 function reset_pan_if_visible()
+    if not is_image() then return end
+
     local dim = mp.get_property_native("osd-dimensions")
     if not dim then return end
     local command = ""
@@ -268,6 +303,8 @@ function reset_pan_if_visible()
 end
 
 function zoom_out_or_back()
+    if not is_image() then return end
+
     local current_zoom = mp.get_property("video-zoom")
     if tonumber(current_zoom) ~= 0 then
         mp.command("no-osd set video-zoom 0")
