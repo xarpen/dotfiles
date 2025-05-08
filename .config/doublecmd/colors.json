@@ -624,6 +624,10 @@
               Value : "$1FFFFFFF|$1FFFFFFF|$1FFFFFFF|0|1|0|0"
             },
             {
+              Name : "Modifier",
+              Value : "$1FFFFFFF|$1FFFFFFF|$1FFFFFFF|0|1|1|0"
+            },
+            {
               Name : "Number",
               Value : "$1FFFFFFF|$00800000|$1FFFFFFF|0|1|0|0"
             },
@@ -968,6 +972,10 @@
             {
               Name : "Symbol",
               Value : "$1FFFFFFF|$000000FF|$1FFFFFFF|0|1|0|0"
+            },
+            {
+              Name : "Unknown word",
+              Value : "$1FFFFFFF|$00808080|$1FFFFFFF|0|1|0|0"
             },
             {
               Name : "Variable",

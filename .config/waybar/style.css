@@ -11,7 +11,7 @@
 @define-color maximizedColor alpha(darkorange, 0.5);
 @define-color workspacesUrgentColor alpha(deepskyblue, 0.5);
 @define-color buttonBackgroundColor alpha(white, 0.1);
-@define-color panelBackgroundColor alpha(black, 0.1);
+@define-color panelBackgroundColor alpha(black, 0.5);
 /* padding 0.5em; box-shadow: 0.15em; */
 
 * {

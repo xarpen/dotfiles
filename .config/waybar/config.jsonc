@@ -48,6 +48,7 @@
     "format-icons": {
       "desktop": "🏠",
       "comm": "💬",
+      "doublecmd": "📁",
       "audio": "🔊",
       "code": "📝",
       "unity": "💠",
