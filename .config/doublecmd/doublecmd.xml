@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<doublecmd DCVersion="1.1.24 gamma" ConfigVersion="15">
+<doublecmd DCVersion="1.1.28 gamma" ConfigVersion="15">
   <Toolbars>
     <MainToolbar>
       <Row>
@@ -655,9 +655,9 @@
     <Asymmetric Save="False">False</Asymmetric>
     <IgnoreDate>True</IgnoreDate>
     <FilterCopyRight>True</FilterCopyRight>
-    <FilterEqual>False</FilterEqual>
-    <FilterNotEqual>True</FilterNotEqual>
-    <FilterCopyLeft>True</FilterCopyLeft>
+    <FilterEqual>True</FilterEqual>
+    <FilterNotEqual>False</FilterNotEqual>
+    <FilterCopyLeft>False</FilterCopyLeft>
     <FilterDuplicates>True</FilterDuplicates>
     <FilterSingles>True</FilterSingles>
     <FileMask Save="True">*</FileMask>

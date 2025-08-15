@@ -76,6 +76,9 @@
     <Highlighter Tag="1" Name="SQL">
       <DefaultFilter>SQL Files (*.sql)|*.sql</DefaultFilter>
     </Highlighter>
+    <Highlighter Tag="0" Name="Swift">
+      <DefaultFilter>Swift|*.SWIFT</DefaultFilter>
+    </Highlighter>
     <Highlighter Tag="1" Name="TeX">
       <DefaultFilter>TeX Files (*.tex)|*.tex</DefaultFilter>
     </Highlighter>
