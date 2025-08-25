@@ -158,7 +158,7 @@
       <Width>1920</Width>
       <Height>1060</Height>
       <PixelsPerInch>96</PixelsPerInch>
-      <Maximized>True</Maximized>
+      <Maximized>False</Maximized>
       <Splitter>50.0261369576581</Splitter>
     </Position>
   </MainWindow>

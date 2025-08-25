@@ -1659,6 +1659,57 @@
               ]
             }
           ]
+        },
+        {
+          Name : "Swift",
+          Ranges : [
+            {
+              Name : "Root",
+              Attributes : "$80000008,$80000005;False:False.",
+              KeyLists : [
+                {
+                  Name : "Keywords",
+                  Attributes : "$00FF0000,$00FFFFFF;False:True."
+                },
+                {
+                  Name : "Operators",
+                  Attributes : "$00CC3299,$80000005;False:True."
+                },
+                {
+                  Name : "Punctuators",
+                  Attributes : "$000000FF,$80000005;False:True."
+                },
+                {
+                  Name : "Types",
+                  Attributes : "$00000080,$00FFFFFF;False:True."
+                }
+              ],
+              Ranges : [
+                {
+                  Name : "Remarks //",
+                  Attributes : "$00008000,$00FFFFFF;False:True."
+                },
+                {
+                  Name : "Remarks /*..*/",
+                  Attributes : "$00008000,$00FFFFFF;False:True."
+                },
+                {
+                  Name : "Strings \"..\"",
+                  Attributes : "$00696969,$00FFFFFF;False:True.",
+                  KeyLists : [
+                    {
+                      Name : "Escape",
+                      Attributes : "$00696969,$00FFFFFF;True:True."
+                    }
+                  ]
+                },
+                {
+                  Name : "Strings \"\"\"...\"\"\"",
+                  Attributes : "$00696969,$00FFFFFF;False:True."
+                }
+              ]
+            }
+          ]
         }
       ]
     },
