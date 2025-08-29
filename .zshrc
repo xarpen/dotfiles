@@ -3,6 +3,7 @@
 export EDITOR=subl
 export ZSH="$HOME/.oh-my-zsh"
 export PATH=$PATH:~/.local/bin
+export UPM_ENABLE_GIT_LFS_CACHE=true
 
 ZSH_THEME="robbyrussell"
 ZSH_COMPDUMP="$ZSH_CACHE_DIR/.zcompdump"
