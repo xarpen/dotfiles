@@ -655,9 +655,9 @@
     <Asymmetric Save="False">False</Asymmetric>
     <IgnoreDate>True</IgnoreDate>
     <FilterCopyRight>True</FilterCopyRight>
-    <FilterEqual>True</FilterEqual>
-    <FilterNotEqual>False</FilterNotEqual>
-    <FilterCopyLeft>False</FilterCopyLeft>
+    <FilterEqual>False</FilterEqual>
+    <FilterNotEqual>True</FilterNotEqual>
+    <FilterCopyLeft>True</FilterCopyLeft>
     <FilterDuplicates>True</FilterDuplicates>
     <FilterSingles>True</FilterSingles>
     <FileMask Save="True">*</FileMask>
