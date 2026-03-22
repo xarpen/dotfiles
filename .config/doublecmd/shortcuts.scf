@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<doublecmd DCVersion="1.1.23 gamma">
-  <Hotkeys Version="63">
+<doublecmd DCVersion="1.2.0 beta">
+  <Hotkeys Version="70">
     <Form Name="Main">
       <Hotkey>
         <Shortcut>F2</Shortcut>
@@ -398,6 +398,10 @@
       <Hotkey>
         <Shortcut>Ctrl+Alt+S</Shortcut>
         <Command>cm_Options</Command>
+      </Hotkey>
+      <Hotkey>
+        <Shortcut>Ctrl+K</Shortcut>
+        <Command>cm_MapNetworkDrive</Command>
       </Hotkey>
       <Hotkey>
         <Shortcut>Del</Shortcut>

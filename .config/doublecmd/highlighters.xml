@@ -37,8 +37,8 @@
     <Highlighter Tag="1" Name="Java">
       <DefaultFilter>Java Files (*.java)|*.java</DefaultFilter>
     </Highlighter>
-    <Highlighter Tag="0" Name="Java script">
-      <DefaultFilter>Java script|*.js;*.json</DefaultFilter>
+    <Highlighter Tag="0" Name="JavaScript">
+      <DefaultFilter>JavaScript|*.js;*.ts;*.mjs;*.cjs</DefaultFilter>
     </Highlighter>
     <Highlighter Tag="0" Name="Kotlin">
       <DefaultFilter>Kotlin|*.kt;*.kts</DefaultFilter>
@@ -85,11 +85,11 @@
     <Highlighter Tag="1" Name="UNIX Shell Script">
       <DefaultFilter>UNIX Shell Scripts (*.sh)|*.sh</DefaultFilter>
     </Highlighter>
-    <Highlighter Tag="1" Name="Visual Basic">
-      <DefaultFilter>Visual Basic Files (*.bas)|*.bas</DefaultFilter>
-    </Highlighter>
     <Highlighter Tag="1" Name="XML document">
       <DefaultFilter>XML Document (*.xml,*.xsd,*.xsl,*.xslt,*.dtd)|*.xml;*.xsd;*.xsl;*.xslt;*.dtd</DefaultFilter>
+    </Highlighter>
+    <Highlighter Tag="1" Name="YAML">
+      <DefaultFilter>YAML files (*.yaml;*.yml)|*.yaml;*.yml</DefaultFilter>
     </Highlighter>
     <Highlighter Tag="1" Name="po language files">
       <DefaultFilter>Po Files (*.po,*.pot)|*.po;*.pot</DefaultFilter>

@@ -1,7 +1,7 @@
 // -*- mode: jsonc -*-
 {
   "position": "bottom",
-  "height": 48,
+  "height": 42,
   "spacing": 0,
   "mode": "dock",
   "exclusive": true,
@@ -23,7 +23,7 @@
     //"bluetooth",
     "clock",
     "pulseaudio",
-    "custom/wlsunset",
+    //"custom/wlsunset",
     "custom/desktop"
     //"mpd",
     //"idle_inhibitor",
