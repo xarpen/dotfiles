@@ -1,0 +1,6 @@
+[default]
+path = "~/Pictures/Wallpapers"
+sorting = "random"
+duration = "1d"
+group = 1
+mode = "fit"

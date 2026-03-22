@@ -1,0 +1,13 @@
+[Desktop Entry]
+Name=MagicaVoxel 0.99.7
+Exec=bottles-cli run -p 'MagicaVoxel 0.99.7' -b 'magicavoxel' -- %u
+Type=Application
+Terminal=false
+Categories=Application;
+Icon=/home/account/.bottles/magicavoxel/icons/MagicaVoxel 0.99.7.png
+Comment=Launch MagicaVoxel 0.99.7 using Bottles.
+StartupWMClass=MagicaVoxel 0.99.7
+Actions=Configure;
+[Desktop Action Configure]
+Name=Configure in Bottles
+Exec=bottles -b 'magicavoxel'

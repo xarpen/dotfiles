@@ -1,0 +1,13 @@
+[Desktop Entry]
+Name=Photo
+Exec=bottles-cli run -p Photo -b 'affinity' -- %u
+Type=Application
+Terminal=false
+Categories=Application;
+Icon=/home/account/.bottles/affinity/icons/Photo.png
+Comment=Launch Photo using Bottles.
+StartupWMClass=Photo
+Actions=Configure;
+[Desktop Action Configure]
+Name=Configure in Bottles
+Exec=bottles -b 'affinity'
