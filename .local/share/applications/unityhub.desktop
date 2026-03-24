@@ -3,7 +3,7 @@ Name=Unity Hub
 Exec=/opt/unityhub/unityhub --gtk-version=3 %U
 Terminal=false
 Type=Application
-Icon=unityhubchenko
+Icon=unityhub-256.png
 StartupWMClass=unityhub
 Comment=The Official Unity Hub
 Categories=Development;

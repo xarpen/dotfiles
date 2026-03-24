@@ -2,3 +2,8 @@
 
 !.gitignore
 !.gitattributes
+
+!.local/
+!.local/share/
+!.local/share/icons/
+!.local/share/applications/
