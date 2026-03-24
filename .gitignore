@@ -4,6 +4,23 @@
 !.gitattributes
 
 !.local/
+!.local/bin/
 !.local/share/
 !.local/share/icons/
 !.local/share/applications/
+
+!.config/
+!.config/wpaperd/
+!.config/wofi/
+!.config/waybar/
+!.config/pavucontrol-qt/
+!.config/mpv/
+!.config/mpv/scripts/
+!.config/installer/
+!.config/hypr/
+!.config/hypr/**
+!.config/flameshot/
+!.config/dunst/
+!.config/doublecmd/
+!.config/btop/
+!.config/alacritty/
