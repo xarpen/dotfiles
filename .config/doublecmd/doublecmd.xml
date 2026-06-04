@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<doublecmd DCVersion="1.2.4 beta" ConfigVersion="15">
+<doublecmd DCVersion="1.2.6 beta" ConfigVersion="15">
   <Toolbars>
     <MainToolbar>
       <Row>
@@ -153,12 +153,12 @@
   </Toolbars>
   <MainWindow>
     <Position Save="True">
-      <Left>1920</Left>
+      <Left>0</Left>
       <Top>1080</Top>
       <Width>1912</Width>
       <Height>963</Height>
       <PixelsPerInch>96</PixelsPerInch>
-      <Maximized>True</Maximized>
+      <Maximized>False</Maximized>
       <Splitter>50</Splitter>
     </Position>
   </MainWindow>
@@ -786,7 +786,7 @@
           <Title>Name</Title>
           <Unique>022B3B10-42DE-4A5C-A8B5-BE5A19C87BD8</Unique>
           <FuncString>[DC().GETFILENAMENOEXT{}]</FuncString>
-          <Width>71</Width>
+          <Width>502</Width>
           <Align>0</Align>
           <Font>
             <Name>Segoe UI</Name>
@@ -802,7 +802,7 @@
           <Title>Ext</Title>
           <Unique>FE4BA465-0EC2-47DE-97C7-3DB1A36BCEAB</Unique>
           <FuncString>[DC().GETFILEEXT{}]</FuncString>
-          <Width>74</Width>
+          <Width>122</Width>
           <Align>0</Align>
           <Font>
             <Name>Segoe UI</Name>
